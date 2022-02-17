@@ -1086,6 +1086,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", monospace;
 }
@@ -8517,6 +8521,7 @@ textarea {
   color: #444;
   background: #c3c3c3;
   color: #444;
+  z-index: 998;
   box-sizing: border-box;
 }
 .navbar #mobile-navbar {
@@ -8608,12 +8613,12 @@ textarea {
 
 .navbar-mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -8682,6 +8687,7 @@ textarea {
   color: white;
   background: #0a1172;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #232980;
   color: #232980;
@@ -8775,12 +8781,12 @@ textarea {
 
 .navbar-mobile-blue-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -8849,6 +8855,7 @@ textarea {
   color: white;
   background: #0a1172;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #3b418e;
   color: #3b418e;
@@ -8942,12 +8949,12 @@ textarea {
 
 .navbar-mobile-blue-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -9016,6 +9023,7 @@ textarea {
   color: white;
   background: #0a1172;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #54589c;
   color: #54589c;
@@ -9109,12 +9117,12 @@ textarea {
 
 .navbar-mobile-blue-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -9183,6 +9191,7 @@ textarea {
   color: white;
   background: #0a1172;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #6c70aa;
   color: #6c70aa;
@@ -9276,12 +9285,12 @@ textarea {
 
 .navbar-mobile-blue-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -9350,6 +9359,7 @@ textarea {
   color: #333;
   background: #0a1172;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #8588b9;
   color: #8588b9;
@@ -9443,12 +9453,12 @@ textarea {
 
 .navbar-mobile-blue-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -9517,6 +9527,7 @@ textarea {
   color: #333;
   background: #0a1172;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #9da0c7;
   color: #9da0c7;
@@ -9610,12 +9621,12 @@ textarea {
 
 .navbar-mobile-blue-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -9684,6 +9695,7 @@ textarea {
   color: white;
   background: #d70000;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #db1a1a;
   color: #db1a1a;
@@ -9777,12 +9789,12 @@ textarea {
 
 .navbar-mobile-red-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -9851,6 +9863,7 @@ textarea {
   color: white;
   background: #d70000;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #df3333;
   color: #df3333;
@@ -9944,12 +9957,12 @@ textarea {
 
 .navbar-mobile-red-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -10018,6 +10031,7 @@ textarea {
   color: white;
   background: #d70000;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #e34d4d;
   color: #e34d4d;
@@ -10111,12 +10125,12 @@ textarea {
 
 .navbar-mobile-red-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -10185,6 +10199,7 @@ textarea {
   color: white;
   background: #d70000;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #e76666;
   color: #e76666;
@@ -10278,12 +10293,12 @@ textarea {
 
 .navbar-mobile-red-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -10352,6 +10367,7 @@ textarea {
   color: #333;
   background: #d70000;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #eb8080;
   color: #eb8080;
@@ -10445,12 +10461,12 @@ textarea {
 
 .navbar-mobile-red-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -10519,6 +10535,7 @@ textarea {
   color: #333;
   background: #d70000;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #ef9999;
   color: #ef9999;
@@ -10612,12 +10629,12 @@ textarea {
 
 .navbar-mobile-red-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -10686,6 +10703,7 @@ textarea {
   color: #333;
   background: #f6c31c;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #f7c933;
   color: #f7c933;
@@ -10779,12 +10797,12 @@ textarea {
 
 .navbar-mobile-yellow-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -10853,6 +10871,7 @@ textarea {
   color: #333;
   background: #f6c31c;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #f8cf49;
   color: #f8cf49;
@@ -10946,12 +10965,12 @@ textarea {
 
 .navbar-mobile-yellow-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -11020,6 +11039,7 @@ textarea {
   color: #333;
   background: #f6c31c;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #f9d560;
   color: #f9d560;
@@ -11113,12 +11133,12 @@ textarea {
 
 .navbar-mobile-yellow-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -11187,6 +11207,7 @@ textarea {
   color: #333;
   background: #f6c31c;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #fadb77;
   color: #fadb77;
@@ -11280,12 +11301,12 @@ textarea {
 
 .navbar-mobile-yellow-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -11354,6 +11375,7 @@ textarea {
   color: #333;
   background: #f6c31c;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #fbe18e;
   color: #fbe18e;
@@ -11447,12 +11469,12 @@ textarea {
 
 .navbar-mobile-yellow-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -11521,6 +11543,7 @@ textarea {
   color: #333;
   background: #f6c31c;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #fbe7a4;
   color: #fbe7a4;
@@ -11614,12 +11637,12 @@ textarea {
 
 .navbar-mobile-yellow-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -11688,6 +11711,7 @@ textarea {
   color: white;
   background: #028a0f;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #1b9627;
   color: #1b9627;
@@ -11781,12 +11805,12 @@ textarea {
 
 .navbar-mobile-green-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -11855,6 +11879,7 @@ textarea {
   color: white;
   background: #028a0f;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #35a13f;
   color: #35a13f;
@@ -11948,12 +11973,12 @@ textarea {
 
 .navbar-mobile-green-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -12022,6 +12047,7 @@ textarea {
   color: white;
   background: #028a0f;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #4ead57;
   color: #4ead57;
@@ -12115,12 +12141,12 @@ textarea {
 
 .navbar-mobile-green-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -12189,6 +12215,7 @@ textarea {
   color: white;
   background: #028a0f;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #67b96f;
   color: #67b96f;
@@ -12282,12 +12309,12 @@ textarea {
 
 .navbar-mobile-green-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -12356,6 +12383,7 @@ textarea {
   color: #333;
   background: #028a0f;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #81c587;
   color: #81c587;
@@ -12449,12 +12477,12 @@ textarea {
 
 .navbar-mobile-green-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -12523,6 +12551,7 @@ textarea {
   color: #333;
   background: #028a0f;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #9ad09f;
   color: #9ad09f;
@@ -12616,12 +12645,12 @@ textarea {
 
 .navbar-mobile-green-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -12690,6 +12719,7 @@ textarea {
   color: white;
   background: #ed7014;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #ef7e2c;
   color: #ef7e2c;
@@ -12783,12 +12813,12 @@ textarea {
 
 .navbar-mobile-orange-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -12857,6 +12887,7 @@ textarea {
   color: white;
   background: #ed7014;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #f18d43;
   color: #f18d43;
@@ -12950,12 +12981,12 @@ textarea {
 
 .navbar-mobile-orange-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -13024,6 +13055,7 @@ textarea {
   color: white;
   background: #ed7014;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #f29b5b;
   color: #f29b5b;
@@ -13117,12 +13149,12 @@ textarea {
 
 .navbar-mobile-orange-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -13191,6 +13223,7 @@ textarea {
   color: white;
   background: #ed7014;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #f4a972;
   color: #f4a972;
@@ -13284,12 +13317,12 @@ textarea {
 
 .navbar-mobile-orange-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -13358,6 +13391,7 @@ textarea {
   color: #333;
   background: #ed7014;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #f6b88a;
   color: #f6b88a;
@@ -13451,12 +13485,12 @@ textarea {
 
 .navbar-mobile-orange-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -13525,6 +13559,7 @@ textarea {
   color: #333;
   background: #ed7014;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #f8c6a1;
   color: #f8c6a1;
@@ -13618,12 +13653,12 @@ textarea {
 
 .navbar-mobile-orange-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -13692,6 +13727,7 @@ textarea {
   color: white;
   background: #710193;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #7f1a9e;
   color: #7f1a9e;
@@ -13785,12 +13821,12 @@ textarea {
 
 .navbar-mobile-purple-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -13859,6 +13895,7 @@ textarea {
   color: white;
   background: #710193;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #8d34a9;
   color: #8d34a9;
@@ -13952,12 +13989,12 @@ textarea {
 
 .navbar-mobile-purple-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -14026,6 +14063,7 @@ textarea {
   color: white;
   background: #710193;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #9c4db3;
   color: #9c4db3;
@@ -14119,12 +14157,12 @@ textarea {
 
 .navbar-mobile-purple-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -14193,6 +14231,7 @@ textarea {
   color: white;
   background: #710193;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #aa67be;
   color: #aa67be;
@@ -14286,12 +14325,12 @@ textarea {
 
 .navbar-mobile-purple-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -14360,6 +14399,7 @@ textarea {
   color: #333;
   background: #710193;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #b880c9;
   color: #b880c9;
@@ -14453,12 +14493,12 @@ textarea {
 
 .navbar-mobile-purple-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -14527,6 +14567,7 @@ textarea {
   color: #333;
   background: #710193;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #c699d4;
   color: #c699d4;
@@ -14620,12 +14661,12 @@ textarea {
 
 .navbar-mobile-purple-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -14694,6 +14735,7 @@ textarea {
   color: white;
   background: #808080;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #8d8d8d;
   color: #8d8d8d;
@@ -14787,12 +14829,12 @@ textarea {
 
 .navbar-mobile-gray-10 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -14861,6 +14903,7 @@ textarea {
   color: white;
   background: #808080;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #999999;
   color: #999999;
@@ -14954,12 +14997,12 @@ textarea {
 
 .navbar-mobile-gray-20 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -15028,6 +15071,7 @@ textarea {
   color: white;
   background: #808080;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #a6a6a6;
   color: #a6a6a6;
@@ -15121,12 +15165,12 @@ textarea {
 
 .navbar-mobile-gray-30 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -15195,6 +15239,7 @@ textarea {
   color: white;
   background: #808080;
   color: white;
+  z-index: 998;
   box-sizing: border-box;
   background: #b3b3b3;
   color: #b3b3b3;
@@ -15288,12 +15333,12 @@ textarea {
 
 .navbar-mobile-gray-40 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -15362,6 +15407,7 @@ textarea {
   color: #333;
   background: #808080;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: silver;
   color: silver;
@@ -15455,12 +15501,12 @@ textarea {
 
 .navbar-mobile-gray-50 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -15529,6 +15575,7 @@ textarea {
   color: #333;
   background: #808080;
   color: #333;
+  z-index: 998;
   box-sizing: border-box;
   background: #cccccc;
   color: #cccccc;
@@ -15622,12 +15669,12 @@ textarea {
 
 .navbar-mobile-gray-60 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
   transform: scale(0);
   opacity: 0;
@@ -15696,6 +15743,7 @@ textarea {
   color: #ededed;
   background: black;
   color: #ededed;
+  z-index: 998;
   box-sizing: border-box;
 }
 .navbar-black #mobile-navbar {
@@ -15795,6 +15843,7 @@ textarea {
   color: #121212;
   background: white;
   color: #121212;
+  z-index: 998;
   box-sizing: border-box;
 }
 .navbar-white #mobile-navbar {
@@ -15894,6 +15943,7 @@ textarea {
   color: #121212;
   background: transparent;
   color: #121212;
+  z-index: 998;
   box-sizing: border-box;
 }
 .navbar-transparent #mobile-navbar {
