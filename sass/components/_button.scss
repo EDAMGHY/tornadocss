@@ -1,0 +1,103 @@
+@use 'sass:math';
+
+@mixin btn($bg-color: #c3c3c3) {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: math.div($base-padding, 1.25) $base-padding * 1.5;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  background-color: $bg-color;
+  font-weight: 600;
+  margin-top: $base-margin;
+  margin-bottom: $base-margin;
+  font-size: $base-font-size;
+  text-transform: capitalize;
+  transition: border-color 0.5s ease, color 0.5s ease,
+    background-color 0.5s ease;
+  color: #555;
+  &:hover {
+    color: $bg-color;
+    background: #555;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  @media (max-width: 768px) {
+    padding: math.div($base-padding, 1.5) math.div($base-padding, 1.25);
+    margin-top: math.div($base-margin, 1.25);
+    margin-top: math.div($base-margin, 1.25);
+    font-size: math.div($base-font-size, 1.75);
+  }
+}
+.btn {
+  @include btn;
+}
+.btn-outlined {
+  @include btn(#fff);
+  border: $base-border-thickness * 2 solid $gray;
+}
+@each $key, $val in $colors {
+  @if (
+    $val != black and $val != white and $val != #808080 and $val != transparent
+  ) {
+    @for $i from 1 through 6 {
+      .btn-#{$key}-#{$i}0 {
+        @include btn(mixW($val, $i * 10));
+        @if ($i <=3) {
+          color: white;
+        } @else {
+          color: darken(mixW($val, $i * 10), 25);
+        }
+        &:hover {
+          background-color: lighten(mixW($val, $i * 10), 7);
+          @if ($i <=3) {
+            color: white;
+          } @else {
+            color: darken(mixW($val, $i * 10), 20);
+          }
+        }
+      }
+      .btn-outlined-#{$key}-#{$i}0 {
+        @include btn(#fff);
+        border: $base-border-thickness * 2 solid mixW($val, $i * 10);
+        @if ($i <= 3) {
+          color: mixW($val, $i * 10);
+        } @else {
+          color: darken($val, 5);
+        }
+        &:hover {
+          @if ($i > 3) {
+            background-color: lighten(mixW($val, $i * 10), 3);
+            color: darken(mixW($val, $i * 10), 30);
+            border-color: darken(mixW($val, $i * 10), 5);
+          } @else {
+            background-color: mixW($val, $i * 10);
+            color: #fff;
+            border-color: lighten(mixW($val, $i * 10), 10);
+          }
+        }
+      }
+    }
+  } @else {
+    .btn-#{$key} {
+      @include btn($val);
+      @if ($val == black) {
+        color: white;
+      } @else {
+        color: black;
+      }
+      &:hover {
+        @if $val == white {
+          background: black;
+          color: white;
+        } @else {
+          color: black;
+          background: white;
+        }
+      }
+    }
+  }
+}

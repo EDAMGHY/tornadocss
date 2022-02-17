@@ -1,0 +1,266 @@
+@use 'sass:math';
+
+$grid-columns: 12;
+
+$align-values: (
+  'f-end': flex-end,
+  'f-start': flex-start,
+  'center': center,
+);
+
+$grid-gaps: (
+  '0': 0,
+  '1': 10px,
+  '2': 20px,
+  '3': 30px,
+  '4': 40px,
+  '5': 50px,
+);
+$justify-values: (
+  'f-end': flex-end,
+  'f-start': flex-start,
+  'between': space-between,
+  'around': space-around,
+  'evenly': space-evenly,
+  'center': center,
+);
+$flex-directions: (
+  'row': row,
+  'column': column,
+  'cr': column-reverse,
+  'rr': row-reverse,
+);
+
+@mixin container($max-width: 1100px) {
+  width: 100%;
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: 30px;
+  box-sizing: border-box;
+}
+
+.container {
+  @include container;
+}
+// Container
+@each $key, $val in $breakpoints {
+  .container-#{$key} {
+    @include container($val);
+  }
+}
+// Flex Direction
+@mixin FlexDirectionMixin($br: '') {
+  @each $key, $val in $flex-directions {
+    .#{$br}flex-#{$key} {
+      flex-direction: $val;
+    }
+  }
+}
+@include FlexDirectionMixin;
+// Justify Content
+@mixin JustifyContentMixin($br: '') {
+  @each $key, $val in $justify-values {
+    .#{$br}justify-#{$key} {
+      justify-content: $val;
+    }
+  }
+}
+@include JustifyContentMixin;
+// Align Items
+@mixin AlignItemsMixin($br: '') {
+  @each $key, $val in $align-values {
+    .#{$br}align-#{$key} {
+      align-items: $val;
+    }
+  }
+}
+@include AlignItemsMixin;
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+// grid gaps
+@mixin GapMixin($br: '') {
+  @each $key, $val in $grid-gaps {
+    .#{$br}gap-#{$key} > * {
+      padding: $val;
+    }
+    .#{$br}gap-#{$key} {
+      margin-left: -$val;
+      margin-right: -$val;
+    }
+  }
+}
+@include GapMixin;
+
+// heading mixin
+@mixin HeadingMixin($br) {
+  @each $key, $val in $headings {
+    .#{$br}#{$key} {
+      font-size: $val;
+      line-height: 1;
+      padding: $base-padding 0;
+      letter-spacing: 3px;
+    }
+  }
+}
+// utilities mixing
+@mixin UtilitiesMixin($br: '') {
+  @each $property, $map in $utilities {
+    $prefix: map-get($map, 'prefix');
+    $values: map-get($map, 'values');
+
+    @each $k, $v in $values {
+      @if ($k == 'default') {
+        .#{$br}#{$prefix} {
+          #{$property}: $v;
+        }
+      } @else {
+        @if ($property == 'padding') or ($property == 'margin') {
+          @if ($v != 0) {
+            .#{$br}#{$prefix}x-#{$k} {
+              #{$property}: 0 $v;
+            }
+            .#{$br}#{$prefix}y-#{$k} {
+              #{$property}: $v 0;
+            }
+          }
+        }
+        .#{$br}#{$prefix}-#{$k} {
+          #{$property}: $v;
+        }
+      }
+    }
+  }
+}
+@mixin BordersMixin($br: '') {
+  @each $key, $val in $colors {
+    @if ($val != black and $val != white and $val != transparent) {
+      @for $i from 8 through 1 {
+        .#{$br}border-#{$key}-#{$i}0 {
+          border-color: mixW($val, $i * 10);
+          transition: border-color 0.5s ease;
+        }
+        .hover-#{$br}border-#{$key}-#{$i}0 {
+          &:hover {
+            border-color: mixW($val, $i * 10);
+          }
+        }
+      }
+    } @else {
+      .#{$br}border-#{$key} {
+        border-color: $val;
+        transition: border-color 0.6s ease;
+      }
+      .hover-#{$br}border-#{$key} {
+        transition: border-color 0.6s ease;
+        &:hover {
+          border-color: $val;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xs {
+      box-sizing: border-box;
+      flex-grow: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+  @include allColors(xs-text, xs-bg);
+  @include FlexDirectionMixin('xs-');
+  @include JustifyContentMixin('xs-');
+  @include AlignItemsMixin('xs-');
+  @include HeadingMixin('xs-');
+  @include GapMixin('xs-');
+  @include UtilitiesMixin('xs-');
+  @include BordersMixin('xs-');
+}
+@include sm {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-sm {
+      box-sizing: border-box;
+      flex-grow: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+  @include allColors(sm-text, sm-bg);
+  @include FlexDirectionMixin('sm-');
+  @include JustifyContentMixin('sm-');
+  @include AlignItemsMixin('sm-');
+  @include HeadingMixin('sm-');
+  @include GapMixin('sm-');
+  @include UtilitiesMixin('sm-');
+  @include BordersMixin('sm-');
+}
+@include md {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-md {
+      box-sizing: border-box;
+      flex-grow: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+  @include allColors(md-text, md-bg);
+  @include FlexDirectionMixin('md-');
+  @include JustifyContentMixin('md-');
+  @include AlignItemsMixin('md-');
+  @include HeadingMixin('md-');
+  @include GapMixin('md-');
+  @include UtilitiesMixin('md-');
+  @include BordersMixin('md-');
+}
+@include lg {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-lg {
+      box-sizing: border-box;
+      flex-grow: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+  @include allColors(lg-text, lg-bg);
+  @include FlexDirectionMixin('lg-');
+  @include JustifyContentMixin('lg-');
+  @include AlignItemsMixin('lg-');
+  @include HeadingMixin('lg-');
+  @include GapMixin('lg-');
+  @include UtilitiesMixin('lg-');
+  @include BordersMixin('lg-');
+}
+
+@include xl {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xl {
+      box-sizing: border-box;
+      flex-grow: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+  @include allColors(xl-text, xl-bg);
+  @include FlexDirectionMixin('xl-');
+  @include JustifyContentMixin('xl-');
+  @include AlignItemsMixin('xl-');
+  @include HeadingMixin('xl-');
+  @include GapMixin('xl-');
+  @include UtilitiesMixin('xl-');
+  @include BordersMixin('xl-');
+}

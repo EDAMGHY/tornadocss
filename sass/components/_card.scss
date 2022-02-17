@@ -1,0 +1,112 @@
+@use 'sass:math';
+@mixin card {
+  border-radius: $base-radius;
+  border: $base-border-thickness * 2 solid transparent;
+  box-shadow: $base-box-shadow;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .image-container {
+    width: 100%;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 97%;
+      height: 96%;
+      display: inline-block;
+      border-radius: $base-radius $base-radius 0 0;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+    }
+  }
+  &-context {
+    padding: $base-padding $base-padding * 2;
+    &-title {
+      font-size: $base-font-size * 1.5;
+      font-family: inherit;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      margin-bottom: $base-margin;
+      margin-top: math.div($base-margin, 1.5);
+    }
+    &-text {
+      font-size: math.div($base-font-size, 1.2);
+      font-family: inherit;
+      line-height: 1.5;
+      text-align: left;
+      letter-spacing: 2px;
+    }
+    button,
+    a {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: $base-margin * 1.35;
+    }
+  }
+}
+
+.card {
+  @include card;
+}
+
+@media (max-width: 990px) {
+  .card {
+    &-context {
+      &-title {
+        font-size: $base-font-size;
+        margin-bottom: math.div($base-margin, 2);
+        margin-top: math.div($base-margin, 3);
+      }
+      &-text {
+        font-size: math.div($base-font-size, 1.5);
+      }
+      button,
+      a {
+        margin-bottom: math.div($base-margin, 1.5);
+        padding: math.div($base-padding, 2);
+        font-size: $base-font-size;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    padding: 0;
+    border: $base-border-thickness * 2 solid white;
+    .image-container {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    button,
+    a {
+      font-size: math.div($base-font-size, 1.5);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    &-context {
+      &-title {
+        font-size: math.div($base-font-size, 1.1);
+      }
+      &-text {
+        font-size: math.div($base-font-size, 1.5);
+      }
+      button,
+      a {
+        margin-top: math.div($base-margin, 2);
+        font-size: math.div($base-font-size, 2);
+        padding: math.div($base-padding, 2);
+      }
+    }
+  }
+}

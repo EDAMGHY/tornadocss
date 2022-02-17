@@ -1,0 +1,109 @@
+@use 'sass:math';
+
+@mixin List($bg: #c3c3c3, $color: #444, $width: 100%, $content: flex-start) {
+  width: $width;
+  margin: $base-margin * 1.5 0;
+  box-shadow: $base-box-shadow;
+  border: 0;
+  border-radius: $base-radius;
+  @if $bg != #c3c3c3 {
+    @if ($bg == $red or $bg == $purple) {
+      background: lighten($bg, 30);
+    } @else if ($bg == $orange or $bg == $yellow) {
+      //   background: lighten($bg, 45);
+      background: $bg;
+    } @else if ($bg==$green) {
+      background: lighten($bg, 5);
+    } @else {
+      background: lighten($bg, 45);
+    }
+  } @else {
+    background: $bg;
+  }
+  color: $color;
+  & > * {
+    padding: $base-padding $base-padding * 2.5;
+    border-bottom: $base-border-thickness solid lighten($color, 35);
+    letter-spacing: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: inherit;
+    font-size: $base-font-size;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: $content;
+    &:hover {
+      @if $bg != #c3c3c3 {
+        @if ($bg == $red or $bg == $purple) {
+          color: lighten($bg, 30);
+        } @else if ($bg == $orange or $bg == $yellow) {
+          //   background: lighten($bg, 45);
+          color: $bg;
+        } @else if ($bg==$green) {
+          color: lighten($bg, 5);
+        } @else {
+          color: lighten($bg, 45);
+        }
+        @if ($bg == $yellow) {
+          background: $color;
+        } @else {
+          background: darken($color, 7);
+        }
+      } @else {
+        color: $bg;
+        background: $color;
+      }
+    }
+    &:first-child {
+      border-radius: $base-radius $base-radius 0 0;
+    }
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0 0 $base-radius $base-radius;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: math.div($base-margin, 1.25) 0;
+    & > * {
+      padding: math.div($base-padding, 1.5) $base-padding;
+      font-size: math.div($base-font-size, 1.5);
+    }
+  }
+}
+
+.items {
+  @include List;
+}
+
+.items-between {
+  @include List($content: space-between);
+}
+
+@each $key, $val in $colors {
+  @if (
+    $val != black and $val != white and $val != #808080 and $val != transparent
+  ) {
+    .items-#{$key} {
+      @include List($val, #fff);
+    }
+    .items-#{$key}-sm {
+      @include List($val, #fff, 400px);
+    }
+    .items-#{$key}-lg {
+      @include List($val, #fff, 600px);
+    }
+    .items-between-#{$key} {
+      @include List($val, #fff, $content: space-between);
+    }
+    .items-between-#{$key}-sm {
+      @include List($val, #fff, 400px, $content: space-between);
+    }
+    .items-between-#{$key}-lg {
+      @include List($val, #fff, 600px, space-between);
+    }
+  }
+}

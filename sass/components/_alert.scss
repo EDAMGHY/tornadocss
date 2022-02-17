@@ -1,0 +1,58 @@
+@use 'sass:math';
+@mixin alert($alert-bg: #c3c3c3, $i: 50) {
+  padding: $base-padding * 1.5;
+  background: $alert-bg;
+  border-radius: $base-radius;
+  margin: $base-margin * 1.5 0;
+  @if ($alert-bg==white) {
+    border: 2px solid black;
+    color: black;
+  } @else if($alert-bg==black) {
+    border: 2px solid white;
+    color: white;
+  } @else {
+    color: darken($alert-bg, 45);
+    border: 2px solid darken($alert-bg, 35);
+  }
+  text-align: center;
+  font-size: $base-font-size;
+  letter-spacing: 1px;
+  font-weight: 500;
+  .alert-link {
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    padding: $base-padding;
+    font-size: math.div($base-font-size, 1.25);
+  }
+}
+.alert {
+  @include alert;
+}
+
+@each $key, $val in $colors {
+  @if (
+    $val != black and $val != white and $val != #808080 and $val != transparent
+  ) {
+    @for $i from 4 through 6 {
+      @if ($i != 5) {
+        $type: 'dark';
+        @if ($i == 6) {
+          $type: 'light';
+        } @else {
+          $type: 'dark';
+        }
+        .alert-#{$key}-#{$type} {
+          @include alert(mixW($val, $i * 10), $i);
+        }
+      }
+    }
+  } @else {
+    .alert-#{$key} {
+      @include alert($val);
+    }
+  }
+}

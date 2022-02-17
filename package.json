@@ -2,10 +2,31 @@
   "name": "tornadocss",
   "version": "1.0.0",
   "description": "This is a simple CSS Framework with Both Utilities and Pre-Styled Components",
-  "main": "index.js",
+  "main": "dist/js/tornado.min.js",
+  "module": "dist/js/tornado.min.js",
+  "browser": "dist/js/tornado.min.js",
+  "style": "dist/css/tornado.min.js",
+  "sass": "sass/tornado.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "min": "css-minify -d dist/css -o dist/css"
   },
+  "keywords": [
+    "css",
+    "style",
+    "framework",
+    "cssFramework",
+    "css-framework",
+    "cssframework",
+    "styles",
+    "sass",
+    "scss",
+    "responsive",
+    "front-end",
+    "web",
+    "tornado",
+    "tornadocss"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EDAMGHY/tornadocss.git"
@@ -15,5 +36,10 @@
   "bugs": {
     "url": "https://github.com/EDAMGHY/tornadocss/issues"
   },
-  "homepage": "https://github.com/EDAMGHY/tornadocss#readme"
+  "homepage": "https://github.com/EDAMGHY/tornadocss#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
+  }
 }

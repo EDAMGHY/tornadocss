@@ -1,0 +1,6 @@
+@function mixW($color, $i) {
+  @return mix(white, $color, $i);
+}
+@function mixB($color, $i) {
+  @return mix(black, $color, $i);
+}

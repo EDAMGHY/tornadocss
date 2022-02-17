@@ -1,0 +1,489 @@
+@use 'sass:math';
+
+$utilities: (
+  'padding': (
+    'prefix': 'p',
+    'values': (
+      '0': 0,
+      '1': $base-padding,
+      '2': $base-padding * 2,
+      '3': $base-padding * 4,
+      '4': $base-padding * 6,
+      '5': $base-padding * 8,
+      'auto': auto,
+    ),
+  ),
+  'padding-left': (
+    'prefix': 'pl',
+    'values': (
+      '0': 0,
+      '1': $base-padding,
+      '2': $base-padding * 2,
+      '3': $base-padding * 4,
+      '4': $base-padding * 6,
+      '5': $base-padding * 8,
+    ),
+  ),
+  'padding-right': (
+    'prefix': 'pr',
+    'values': (
+      '0': 0,
+      '1': $base-padding,
+      '2': $base-padding * 2,
+      '3': $base-padding * 4,
+      '4': $base-padding * 6,
+      '5': $base-padding * 8,
+    ),
+  ),
+  'padding-top': (
+    'prefix': 'pt',
+    'values': (
+      '0': 0,
+      '1': $base-padding,
+      '2': $base-padding * 2,
+      '3': $base-padding * 4,
+      '4': $base-padding * 6,
+      '5': $base-padding * 8,
+    ),
+  ),
+  'padding-bottom': (
+    'prefix': 'pb',
+    'values': (
+      '0': 0,
+      '1': $base-padding,
+      '2': $base-padding * 2,
+      '3': $base-padding * 4,
+      '4': $base-padding * 6,
+      '5': $base-padding * 8,
+    ),
+  ),
+  'margin': (
+    'prefix': 'm',
+    'values': (
+      '0': 0,
+      '1': $base-margin,
+      '2': $base-margin * 2,
+      '3': $base-margin * 4,
+      '4': $base-margin * 6,
+      '5': $base-margin * 8,
+      'auto': auto,
+    ),
+  ),
+  'margin-left': (
+    'prefix': 'ml',
+    'values': (
+      '0': 0,
+      '1': $base-margin,
+      '2': $base-margin * 2,
+      '3': $base-margin * 4,
+      '4': $base-margin * 6,
+      '5': $base-margin * 8,
+    ),
+  ),
+  'margin-right': (
+    'prefix': 'mr',
+    'values': (
+      '0': 0,
+      '1': $base-margin,
+      '2': $base-margin * 2,
+      '3': $base-margin * 4,
+      '4': $base-margin * 6,
+      '5': $base-margin * 8,
+    ),
+  ),
+  'margin-top': (
+    'prefix': 'mt',
+    'values': (
+      '0': 0,
+      '1': $base-margin,
+      '2': $base-margin * 2,
+      '3': $base-margin * 4,
+      '4': $base-margin * 6,
+      '5': $base-margin * 8,
+    ),
+  ),
+  'margin-bottom': (
+    'prefix': 'mb',
+    'values': (
+      '0': 0,
+      '1': $base-margin,
+      '2': $base-margin * 2,
+      '3': $base-margin * 4,
+      '4': $base-margin * 6,
+      '5': $base-margin * 8,
+    ),
+  ),
+  'opacity': (
+    'prefix': 'opacity',
+    'values': (
+      '0': 0,
+      '10': 0.1,
+      '20': 0.2,
+      '40': 0.4,
+      '60': 0.6,
+      '80': 0.8,
+      '100': 1,
+    ),
+  ),
+  'border-radius': (
+    'prefix': 'radius',
+    'values': (
+      'default': $base-radius,
+      'none': 0,
+      'xs': math.div($base-radius, 2),
+      'sm': $base-radius * 0.75,
+      'base': $base-radius * 1.25,
+      'md': $base-radius * 2,
+      'lg': $base-radius * 3,
+      'xl': $base-radius * 4,
+      'full': 50%,
+    ),
+  ),
+  'display': (
+    'prefix': 'display',
+    'values': (
+      'none': none,
+      'b': block,
+      'f': flex,
+      'g': grid,
+      'i': inline,
+      'i-b': inline-block,
+    ),
+  ),
+  'font-size': (
+    'prefix': 'font',
+    'values': (
+      'xs': $font-size-xs,
+      'sm': $font-size-sm,
+      'md': $font-size-md,
+      'base': $base-font-size,
+      'lg': $font-size-lg,
+      'xl': $font-size-xl,
+      '2xl': $font-size-2xl,
+      '3xl': $font-size-3xl,
+      '4xl': $font-size-4xl,
+      '5xl': $font-size-5xl,
+    ),
+  ),
+  'font-family': (
+    'prefix': 'font',
+    'values': (
+      'inherit': inherit,
+      'mono': monospace,
+      'serif': serif,
+      'sans': sans-serif,
+      'inter': 'Inter',
+      'oswald': 'Oswald',
+      'roboto': 'Roboto Mono',
+    ),
+  ),
+  'font-weight': (
+    'prefix': 'font',
+    'values': (
+      'light': 300,
+      'normal': 400,
+      'medium': 500,
+      'bold': 700,
+      'extrabold': 900,
+    ),
+  ),
+  'text-align': (
+    'prefix': 'text',
+    'values': (
+      'center': center,
+      'left': left,
+      'right': right,
+      'justify': justify,
+      'start': start,
+      'end': end,
+    ),
+  ),
+  'text-transform': (
+    'prefix': 'text',
+    'values': (
+      'none': none,
+      'capitalize': capitalize,
+      'upper': uppercase,
+      'lower': lowercase,
+    ),
+  ),
+  'width': (
+    'prefix': 'w',
+    'values': (
+      '0': 0,
+      'px': 1px,
+      '0-5': math.div($base-font-size, 8),
+      '1': math.div($base-font-size, 4),
+      '1-5': math.div($base-font-size, 2),
+      '2': $base-font-size,
+      '2-5': $base-font-size * 1.25,
+      '3': $base-font-size * 1.5,
+      '4': $base-font-size * 2,
+      '5': $base-font-size * 2.5,
+      '6': $base-font-size * 3,
+      '7': $base-font-size * 3.5,
+      '8': $base-font-size * 4,
+      '9': $base-font-size * 4.5,
+      '10': $base-font-size * 5,
+      '11': $base-font-size * 5.5,
+      '12': $base-font-size * 6,
+      '13': $base-font-size * 6.5,
+      '14': $base-font-size * 7,
+      '15': $base-font-size * 7.5,
+      '16': $base-font-size * 8,
+      '17': $base-font-size * 8.5,
+      '18': $base-font-size * 9,
+      '19': $base-font-size * 10,
+      '20': $base-font-size * 11,
+      '21': $base-font-size * 12,
+      '22': $base-font-size * 13,
+      '23': $base-font-size * 14,
+      '24': $base-font-size * 15,
+      '28': $base-font-size * 17,
+      '32': $base-font-size * 18.75,
+      '36': $base-font-size * 20,
+      '40': $base-font-size * 22.5,
+      '44': $base-font-size * 24,
+      '48': $base-font-size * 26,
+      '52': $base-font-size * 28,
+      '56': $base-font-size * 30,
+      '60': $base-font-size * 35,
+      '64': $base-font-size * 38,
+      '68': $base-font-size * 42,
+      '72': $base-font-size * 46,
+      '76': $base-font-size * 52,
+      '80': $base-font-size * 54,
+      '88': $base-font-size * 56,
+      '92': $base-font-size * 58,
+      '96': $base-font-size * 60,
+      '100': $base-font-size * 62.5,
+      '1--2': 50%,
+      '1--4': 25%,
+      '2--4': 50%,
+      '3--4': 75%,
+      '1--3': 33.333333%,
+      '2--3': 66.666667%,
+      '1--5': 20%,
+      '2--5': 40%,
+      '3--5': 60%,
+      '4--5': 80%,
+      'full': 100%,
+      'vw': 100vw,
+    ),
+  ),
+  'height': (
+    'prefix': 'h',
+    'values': (
+      '0': 0,
+      'px': 1px,
+      '0-5': math.div($base-font-size, 8),
+      '1': math.div($base-font-size, 4),
+      '1-5': math.div($base-font-size, 2),
+      '2': $base-font-size,
+      '2-5': $base-font-size * 1.25,
+      '3': $base-font-size * 1.5,
+      '4': $base-font-size * 2,
+      '5': $base-font-size * 2.5,
+      '6': $base-font-size * 3,
+      '7': $base-font-size * 3.5,
+      '8': $base-font-size * 4,
+      '9': $base-font-size * 4.5,
+      '10': $base-font-size * 5,
+      '11': $base-font-size * 5.5,
+      '12': $base-font-size * 6,
+      '13': $base-font-size * 6.5,
+      '14': $base-font-size * 7,
+      '15': $base-font-size * 7.5,
+      '16': $base-font-size * 8,
+      '17': $base-font-size * 8.5,
+      '18': $base-font-size * 9,
+      '19': $base-font-size * 10,
+      '20': $base-font-size * 11,
+      '21': $base-font-size * 12,
+      '22': $base-font-size * 13,
+      '23': $base-font-size * 14,
+      '24': $base-font-size * 15,
+      '28': $base-font-size * 17,
+      '32': $base-font-size * 18.75,
+      '36': $base-font-size * 20,
+      '40': $base-font-size * 22.5,
+      '44': $base-font-size * 24,
+      '48': $base-font-size * 26,
+      '52': $base-font-size * 28,
+      '56': $base-font-size * 30,
+      '60': $base-font-size * 35,
+      '64': $base-font-size * 38,
+      '68': $base-font-size * 42,
+      '72': $base-font-size * 46,
+      '76': $base-font-size * 52,
+      '80': $base-font-size * 54,
+      '88': $base-font-size * 56,
+      '92': $base-font-size * 58,
+      '96': $base-font-size * 60,
+      '100': $base-font-size * 62.5,
+      '1--2': 50%,
+      '1--4': 25%,
+      '2--4': 50%,
+      '3--4': 75%,
+      '1--3': 33.333333%,
+      '2--3': 66.666667%,
+      '1--5': 20%,
+      '2--5': 40%,
+      '3--5': 60%,
+      '4--5': 80%,
+      'full': 100%,
+      'vh': 100vh,
+    ),
+  ),
+  'border-width': (
+    'prefix': 'border',
+    'values': (
+      '0': 0px,
+      '1': 1px,
+      '2': 2px,
+      '3': 3px,
+      '4': 4px,
+      '6': 6px,
+      '8': 8px,
+      '10': 10px,
+    ),
+  ),
+  'border-style': (
+    'prefix': 'border',
+    'values': (
+      'none': none,
+      'solid': solid,
+      'dashed': dashed,
+      'dotted': dotted,
+      'double': double,
+      'groove': groove,
+      'ridge': ridge,
+      'hidden': hidden,
+    ),
+  ),
+  'box-shadow': (
+    'prefix': 'shadow',
+    'values': (
+      'none': none,
+      'xs': (
+        rgba(60, 64, 67, 0.45) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.3) 0px 2px 6px 2px,
+      ),
+      'sm': (
+        rgba(0, 0, 0, 0.4) 0px 3px 6px,
+        rgba(0, 0, 0, 0.3) 0px 3px 6px,
+      ),
+      'base': (
+        rgba(0, 0, 0, 0.3) 0px 10px 20px,
+        rgba(0, 0, 0, 0.25) 0px 6px 6px,
+      ),
+      'md': (
+        rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px,
+      ),
+      'lg': (
+        rgba(0, 0, 0, 0.25) 0px 16px 32px,
+        rgba(0, 0, 0, 0.21) 0px 12px 12px,
+      ),
+      'xl': (
+        rgba(0, 0, 0, 0.22) 0px 19px 38px,
+        rgba(0, 0, 0, 0.31) 0px 15px 12px,
+      ),
+      '2xl': rgb(38, 57, 77) 0px 20px 30px -10px,
+    ),
+  ),
+);
+
+.visible {
+  visibility: visible !important;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+.main {
+  line-height: 2;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: math.div($base-padding, 1.25) 0;
+}
+.image {
+  object-fit: cover;
+}
+
+$headings: (
+  'h1': $font-size-2xl,
+  'h2': $font-size-xl,
+  'h3': $font-size-lg,
+  'h4': $font-size-md,
+  'h5': $font-size-sm,
+  'h6': $font-size-xs,
+);
+
+@each $key, $val in $headings {
+  .#{$key} {
+    font-size: $val;
+    line-height: 1;
+    padding: $base-padding 0;
+    letter-spacing: 3px;
+    span {
+      font-size: calc($val - 25%);
+      margin: 0 10px;
+    }
+  }
+}
+
+// generate utility classes
+@each $property, $map in $utilities {
+  $prefix: map-get($map, 'prefix');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    } @else {
+      @if ($property == 'padding') or ($property == 'margin') {
+        @if ($v != 0) {
+          .#{$prefix}x-#{$k} {
+            #{$property}: 0 $v;
+          }
+          .#{$prefix}y-#{$k} {
+            #{$property}: $v 0;
+          }
+        }
+      }
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+}
+
+@each $key, $val in $colors {
+  @if ($val != black and $val != white and $val != transparent) {
+    @for $i from 9 through 1 {
+      .border-#{$key}-#{$i}0 {
+        border-color: mixW($val, $i * 10);
+        transition: border-color 0.5s ease;
+      }
+      .hover-border-#{$key}-#{$i}0 {
+        &:hover {
+          border-color: mixW($val, $i * 10);
+        }
+      }
+    }
+  } @else {
+    .border-#{$key} {
+      border-color: $val;
+      transition: border-color 0.6s ease;
+    }
+    .hover-border-#{$key} {
+      transition: border-color 0.6s ease;
+      &:hover {
+        border-color: $val;
+      }
+    }
+  }
+}

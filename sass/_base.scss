@@ -1,0 +1,93 @@
+// import google font
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald&family=Roboto+Mono&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* reset styles */
+* {
+  color: inherit;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', monospace;
+  //to remove later
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $base-font-size;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  padding: 0;
+  margin: 0;
+}
+p {
+  letter-spacing: 1px;
+}
+nav + *:not(nav) {
+  margin-top: 72px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+li {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+label {
+  font-family: inherit;
+}
+hr {
+  border: 0;
+  border-top: 1px dotted #eee;
+}
+div {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+input,
+select,
+textarea {
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  nav + *:not(nav) {
+    margin-top: 64px;
+  }
+}

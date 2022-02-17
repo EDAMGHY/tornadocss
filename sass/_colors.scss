@@ -1,0 +1,50 @@
+@mixin allColors($text: text, $bg: bg) {
+  @each $key, $val in $colors {
+    @if ($val != black and $val != white and $val != transparent) {
+      @for $i from 8 through 1 {
+        .#{$text}-#{$key}-#{$i}0 {
+          color: mixW($val, $i * 10);
+          transition: color 0.5s ease, background 0.5s ease;
+        }
+        .hover-#{$text}-#{$key}-#{$i}0 {
+          &:hover {
+            color: mixW($val, $i * 10);
+          }
+        }
+        .#{$bg}-#{$key}-#{$i}0 {
+          background-color: mixW($val, $i * 10);
+          transition: color 0.5s ease, background 0.5s ease;
+        }
+
+        .hover-#{$bg}-#{$key}-#{$i}0 {
+          &:hover {
+            background-color: mixW($val, $i * 10);
+          }
+        }
+      }
+    } @else {
+      .#{$text}-#{$key} {
+        color: $val;
+        transition: color 0.6s ease, background 0.6s ease;
+      }
+      .hover-#{$text}-#{$key} {
+        transition: color 0.6s ease, background 0.6s ease;
+        &:hover {
+          color: $val;
+        }
+      }
+      .#{$bg}-#{$key} {
+        background-color: $val;
+        transition: color 0.6s ease, background 0.6s ease;
+      }
+      .hover-#{$bg}-#{$key} {
+        transition: color 0.6s ease, background 0.6s ease;
+        &:hover {
+          background-color: $val;
+        }
+      }
+    }
+  }
+}
+
+@include allColors;
