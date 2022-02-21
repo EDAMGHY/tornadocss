@@ -16161,6 +16161,11 @@ textarea {
   outline: 3px solid #848484;
   outline-offset: 0.125rem;
 }
+@media (mix-width: 768px) {
+  .form-line label + select {
+    margin-top: 0.65rem !important;
+  }
+}
 @media (max-width: 768px) {
   .form-line {
     padding: 0.375rem 0.75rem;
@@ -16207,14 +16212,14 @@ textarea {
 }
 .select-line:focus {
   border-color: transparent;
-  outline: 2.5px solid #909090;
+  outline: 2.5px solid #777777;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line:focus {
     border-color: transparent;
@@ -16523,6 +16528,11 @@ textarea {
   outline: 3px solid #fff;
   outline-offset: 0.125rem;
 }
+@media (mix-width: 768px) {
+  .form-line-blue label + select {
+    margin-top: 0.65rem !important;
+  }
+}
 @media (max-width: 768px) {
   .form-line-blue {
     padding: 0.375rem 0.75rem;
@@ -16701,7 +16711,7 @@ textarea {
   padding: 0.75rem;
   border: 1.2px solid #2936ec;
   border-radius: 7.5px;
-  color: #444;
+  color: #6f78f2;
   display: inline-block;
   background: #fff;
   font-size: 1rem;
@@ -16717,14 +16727,14 @@ textarea {
 }
 .select-line-blue:focus {
   border-color: transparent;
-  outline: 2.5px solid #1422e7;
+  outline: 2.5px solid #6f78f2;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line-blue {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line-blue:focus {
     border-color: transparent;
@@ -16884,6 +16894,11 @@ textarea {
 .form-line-red input[type=range]:focus::-moz-slider-thumb {
   outline: 3px solid #fff;
   outline-offset: 0.125rem;
+}
+@media (mix-width: 768px) {
+  .form-line-red label + select {
+    margin-top: 0.65rem !important;
+  }
 }
 @media (max-width: 768px) {
   .form-line-red {
@@ -17063,7 +17078,7 @@ textarea {
   padding: 0.75rem;
   border: 1.2px solid #ff3e3e;
   border-radius: 7.5px;
-  color: #444;
+  color: #ff8b8b;
   display: inline-block;
   background: #fff;
   font-size: 1rem;
@@ -17079,14 +17094,14 @@ textarea {
 }
 .select-line-red:focus {
   border-color: transparent;
-  outline: 2.5px solid #ff2525;
+  outline: 2.5px solid #ff8b8b;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line-red {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line-red:focus {
     border-color: transparent;
@@ -17246,6 +17261,11 @@ textarea {
 .form-line-yellow input[type=range]:focus::-moz-slider-thumb {
   outline: 3px solid #fff;
   outline-offset: 0.125rem;
+}
+@media (mix-width: 768px) {
+  .form-line-yellow label + select {
+    margin-top: 0.65rem !important;
+  }
 }
 @media (max-width: 768px) {
   .form-line-yellow {
@@ -17425,7 +17445,7 @@ textarea {
   padding: 0.75rem;
   border: 1.2px solid #be9308;
   border-radius: 7.5px;
-  color: #444;
+  color: #f6c31c;
   display: inline-block;
   background: #fff;
   font-size: 1rem;
@@ -17441,14 +17461,14 @@ textarea {
 }
 .select-line-yellow:focus {
   border-color: transparent;
-  outline: 2.5px solid #a58007;
+  outline: 2.5px solid #f6c31c;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line-yellow {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line-yellow:focus {
     border-color: transparent;
@@ -17608,6 +17628,11 @@ textarea {
 .form-line-green input[type=range]:focus::-moz-slider-thumb {
   outline: 3px solid #fff;
   outline-offset: 0.125rem;
+}
+@media (mix-width: 768px) {
+  .form-line-green label + select {
+    margin-top: 0.65rem !important;
+  }
 }
 @media (max-width: 768px) {
   .form-line-green {
@@ -17787,7 +17812,7 @@ textarea {
   padding: 0.75rem;
   border: 1.2px solid #013f07;
   border-radius: 7.5px;
-  color: #444;
+  color: #028a0f;
   display: inline-block;
   background: #fff;
   font-size: 1rem;
@@ -17803,14 +17828,14 @@ textarea {
 }
 .select-line-green:focus {
   border-color: transparent;
-  outline: 2.5px solid #012504;
+  outline: 2.5px solid #028a0f;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line-green {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line-green:focus {
     border-color: transparent;
@@ -17970,6 +17995,11 @@ textarea {
 .form-line-orange input[type=range]:focus::-moz-slider-thumb {
   outline: 3px solid #fff;
   outline-offset: 0.125rem;
+}
+@media (mix-width: 768px) {
+  .form-line-orange label + select {
+    margin-top: 0.65rem !important;
+  }
 }
 @media (max-width: 768px) {
   .form-line-orange {
@@ -18149,7 +18179,7 @@ textarea {
   padding: 0.75rem;
   border: 1.2px solid #a84e0d;
   border-radius: 7.5px;
-  color: #444;
+  color: #ed7014;
   display: inline-block;
   background: #fff;
   font-size: 1rem;
@@ -18165,14 +18195,14 @@ textarea {
 }
 .select-line-orange:focus {
   border-color: transparent;
-  outline: 2.5px solid #90430b;
+  outline: 2.5px solid #ed7014;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line-orange {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line-orange:focus {
     border-color: transparent;
@@ -18332,6 +18362,11 @@ textarea {
 .form-line-purple input[type=range]:focus::-moz-slider-thumb {
   outline: 3px solid #fff;
   outline-offset: 0.125rem;
+}
+@media (mix-width: 768px) {
+  .form-line-purple label + select {
+    margin-top: 0.65rem !important;
+  }
 }
 @media (max-width: 768px) {
   .form-line-purple {
@@ -18511,7 +18546,7 @@ textarea {
   padding: 0.75rem;
   border: 1.2px solid #370047;
   border-radius: 7.5px;
-  color: #444;
+  color: #710193;
   display: inline-block;
   background: #fff;
   font-size: 1rem;
@@ -18527,14 +18562,14 @@ textarea {
 }
 .select-line-purple:focus {
   border-color: transparent;
-  outline: 2.5px solid #23002e;
+  outline: 2.5px solid #710193;
   outline-offset: 3px;
 }
 @media (max-width: 768px) {
   .select-line-purple {
-    margin: 0.3rem 0;
-    padding: 0.375rem;
-    font-size: 85%;
+    margin: 0.375rem 0;
+    padding: 0.5rem;
+    font-size: 75%;
   }
   .select-line-purple:focus {
     border-color: transparent;
