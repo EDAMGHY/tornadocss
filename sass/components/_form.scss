@@ -144,6 +144,7 @@
   }
   @media (max-width: 768px) {
     padding: math.div($base-padding, 2) $base-padding;
+    margin: 0;
     label {
       font-size: math.div($base-font-size, 1.25);
     }
