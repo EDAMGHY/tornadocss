@@ -18759,6 +18759,10 @@ textarea {
   padding: 0;
 }
 
+.g-0 {
+  gap: 0;
+}
+
 .gap-0 {
   margin-left: 0;
   margin-right: 0;
@@ -18766,6 +18770,10 @@ textarea {
 
 .gap-1 > * {
   padding: 10px;
+}
+
+.g-1 {
+  gap: 10px;
 }
 
 .gap-1 {
@@ -18777,6 +18785,10 @@ textarea {
   padding: 20px;
 }
 
+.g-2 {
+  gap: 20px;
+}
+
 .gap-2 {
   margin-left: -20px;
   margin-right: -20px;
@@ -18784,6 +18796,10 @@ textarea {
 
 .gap-3 > * {
   padding: 30px;
+}
+
+.g-3 {
+  gap: 30px;
 }
 
 .gap-3 {
@@ -18795,6 +18811,10 @@ textarea {
   padding: 40px;
 }
 
+.g-4 {
+  gap: 40px;
+}
+
 .gap-4 {
   margin-left: -40px;
   margin-right: -40px;
@@ -18802,6 +18822,10 @@ textarea {
 
 .gap-5 > * {
   padding: 50px;
+}
+
+.g-5 {
+  gap: 50px;
 }
 
 .gap-5 {
@@ -20096,6 +20120,10 @@ textarea {
     padding: 0;
   }
 
+  .xs-g-0 {
+    gap: 0;
+  }
+
   .xs-gap-0 {
     margin-left: 0;
     margin-right: 0;
@@ -20103,6 +20131,10 @@ textarea {
 
   .xs-gap-1 > * {
     padding: 10px;
+  }
+
+  .xs-g-1 {
+    gap: 10px;
   }
 
   .xs-gap-1 {
@@ -20114,6 +20146,10 @@ textarea {
     padding: 20px;
   }
 
+  .xs-g-2 {
+    gap: 20px;
+  }
+
   .xs-gap-2 {
     margin-left: -20px;
     margin-right: -20px;
@@ -20121,6 +20157,10 @@ textarea {
 
   .xs-gap-3 > * {
     padding: 30px;
+  }
+
+  .xs-g-3 {
+    gap: 30px;
   }
 
   .xs-gap-3 {
@@ -20132,6 +20172,10 @@ textarea {
     padding: 40px;
   }
 
+  .xs-g-4 {
+    gap: 40px;
+  }
+
   .xs-gap-4 {
     margin-left: -40px;
     margin-right: -40px;
@@ -20139,6 +20183,10 @@ textarea {
 
   .xs-gap-5 > * {
     padding: 50px;
+  }
+
+  .xs-g-5 {
+    gap: 50px;
   }
 
   .xs-gap-5 {
@@ -23097,6 +23145,10 @@ textarea {
     padding: 0;
   }
 
+  .sm-g-0 {
+    gap: 0;
+  }
+
   .sm-gap-0 {
     margin-left: 0;
     margin-right: 0;
@@ -23104,6 +23156,10 @@ textarea {
 
   .sm-gap-1 > * {
     padding: 10px;
+  }
+
+  .sm-g-1 {
+    gap: 10px;
   }
 
   .sm-gap-1 {
@@ -23115,6 +23171,10 @@ textarea {
     padding: 20px;
   }
 
+  .sm-g-2 {
+    gap: 20px;
+  }
+
   .sm-gap-2 {
     margin-left: -20px;
     margin-right: -20px;
@@ -23122,6 +23182,10 @@ textarea {
 
   .sm-gap-3 > * {
     padding: 30px;
+  }
+
+  .sm-g-3 {
+    gap: 30px;
   }
 
   .sm-gap-3 {
@@ -23133,6 +23197,10 @@ textarea {
     padding: 40px;
   }
 
+  .sm-g-4 {
+    gap: 40px;
+  }
+
   .sm-gap-4 {
     margin-left: -40px;
     margin-right: -40px;
@@ -23140,6 +23208,10 @@ textarea {
 
   .sm-gap-5 > * {
     padding: 50px;
+  }
+
+  .sm-g-5 {
+    gap: 50px;
   }
 
   .sm-gap-5 {
@@ -26098,6 +26170,10 @@ textarea {
     padding: 0;
   }
 
+  .md-g-0 {
+    gap: 0;
+  }
+
   .md-gap-0 {
     margin-left: 0;
     margin-right: 0;
@@ -26105,6 +26181,10 @@ textarea {
 
   .md-gap-1 > * {
     padding: 10px;
+  }
+
+  .md-g-1 {
+    gap: 10px;
   }
 
   .md-gap-1 {
@@ -26116,6 +26196,10 @@ textarea {
     padding: 20px;
   }
 
+  .md-g-2 {
+    gap: 20px;
+  }
+
   .md-gap-2 {
     margin-left: -20px;
     margin-right: -20px;
@@ -26123,6 +26207,10 @@ textarea {
 
   .md-gap-3 > * {
     padding: 30px;
+  }
+
+  .md-g-3 {
+    gap: 30px;
   }
 
   .md-gap-3 {
@@ -26134,6 +26222,10 @@ textarea {
     padding: 40px;
   }
 
+  .md-g-4 {
+    gap: 40px;
+  }
+
   .md-gap-4 {
     margin-left: -40px;
     margin-right: -40px;
@@ -26141,6 +26233,10 @@ textarea {
 
   .md-gap-5 > * {
     padding: 50px;
+  }
+
+  .md-g-5 {
+    gap: 50px;
   }
 
   .md-gap-5 {
@@ -29099,6 +29195,10 @@ textarea {
     padding: 0;
   }
 
+  .lg-g-0 {
+    gap: 0;
+  }
+
   .lg-gap-0 {
     margin-left: 0;
     margin-right: 0;
@@ -29106,6 +29206,10 @@ textarea {
 
   .lg-gap-1 > * {
     padding: 10px;
+  }
+
+  .lg-g-1 {
+    gap: 10px;
   }
 
   .lg-gap-1 {
@@ -29117,6 +29221,10 @@ textarea {
     padding: 20px;
   }
 
+  .lg-g-2 {
+    gap: 20px;
+  }
+
   .lg-gap-2 {
     margin-left: -20px;
     margin-right: -20px;
@@ -29124,6 +29232,10 @@ textarea {
 
   .lg-gap-3 > * {
     padding: 30px;
+  }
+
+  .lg-g-3 {
+    gap: 30px;
   }
 
   .lg-gap-3 {
@@ -29135,6 +29247,10 @@ textarea {
     padding: 40px;
   }
 
+  .lg-g-4 {
+    gap: 40px;
+  }
+
   .lg-gap-4 {
     margin-left: -40px;
     margin-right: -40px;
@@ -29142,6 +29258,10 @@ textarea {
 
   .lg-gap-5 > * {
     padding: 50px;
+  }
+
+  .lg-g-5 {
+    gap: 50px;
   }
 
   .lg-gap-5 {
@@ -32100,6 +32220,10 @@ textarea {
     padding: 0;
   }
 
+  .xl-g-0 {
+    gap: 0;
+  }
+
   .xl-gap-0 {
     margin-left: 0;
     margin-right: 0;
@@ -32107,6 +32231,10 @@ textarea {
 
   .xl-gap-1 > * {
     padding: 10px;
+  }
+
+  .xl-g-1 {
+    gap: 10px;
   }
 
   .xl-gap-1 {
@@ -32118,6 +32246,10 @@ textarea {
     padding: 20px;
   }
 
+  .xl-g-2 {
+    gap: 20px;
+  }
+
   .xl-gap-2 {
     margin-left: -20px;
     margin-right: -20px;
@@ -32125,6 +32257,10 @@ textarea {
 
   .xl-gap-3 > * {
     padding: 30px;
+  }
+
+  .xl-g-3 {
+    gap: 30px;
   }
 
   .xl-gap-3 {
@@ -32136,6 +32272,10 @@ textarea {
     padding: 40px;
   }
 
+  .xl-g-4 {
+    gap: 40px;
+  }
+
   .xl-gap-4 {
     margin-left: -40px;
     margin-right: -40px;
@@ -32143,6 +32283,10 @@ textarea {
 
   .xl-gap-5 > * {
     padding: 50px;
+  }
+
+  .xl-g-5 {
+    gap: 50px;
   }
 
   .xl-gap-5 {

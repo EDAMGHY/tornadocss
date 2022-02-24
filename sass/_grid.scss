@@ -86,6 +86,9 @@ $flex-directions: (
     .#{$br}gap-#{$key} > * {
       padding: $val;
     }
+    .#{$br}g-#{$key} {
+      gap: $val;
+    }
     .#{$br}gap-#{$key} {
       margin-left: -$val;
       margin-right: -$val;
