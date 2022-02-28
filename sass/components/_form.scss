@@ -174,15 +174,11 @@
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
+  width: fit-content;
   input[type='#{$type}'] {
-    /* Add if not using autoprefixer */
     -webkit-appearance: none;
-    /* Remove most all native input styles */
     appearance: none;
-    /* For iOS < 15 */
     background-color: #fff;
-    /* Not removed via appearance */
-
     font: inherit;
     width: 1.15em;
     height: 1.15em;

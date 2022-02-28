@@ -44,8 +44,10 @@ $flex-directions: (
 }
 // Container
 @each $key, $val in $breakpoints {
-  .container-#{$key} {
-    @include container($val);
+  @if $key != 'xs' {
+    .container-#{$key} {
+      @include container($val);
+    }
   }
 }
 // Flex Direction
@@ -97,17 +99,17 @@ $flex-directions: (
 }
 @include GapMixin;
 
-// heading mixin
-@mixin HeadingMixin($br) {
-  @each $key, $val in $headings {
-    .#{$br}#{$key} {
-      font-size: $val;
-      line-height: 1;
-      padding: $base-padding 0;
-      letter-spacing: 3px;
-    }
-  }
-}
+// // heading mixin
+// @mixin HeadingMixin($br) {
+//   @each $key, $val in $headings {
+//     .#{$br}#{$key} {
+//       font-size: $val;
+//       line-height: 1;
+//       padding: $base-padding 0;
+//       letter-spacing: 3px;
+//     }
+//   }
+// }
 // utilities mixing
 @mixin UtilitiesMixin($br: '') {
   @each $property, $map in $utilities {
@@ -177,14 +179,14 @@ $flex-directions: (
       width: math.div($i * 100%, $grid-columns);
     }
   }
-  @include allColors(xs-text, xs-bg);
-  @include FlexDirectionMixin('xs-');
-  @include JustifyContentMixin('xs-');
-  @include AlignItemsMixin('xs-');
-  @include HeadingMixin('xs-');
-  @include GapMixin('xs-');
-  @include UtilitiesMixin('xs-');
-  @include BordersMixin('xs-');
+  // @include allColors(xs-text, xs-bg);
+  // @include FlexDirectionMixin('xs-');
+  // @include JustifyContentMixin('xs-');
+  // @include AlignItemsMixin('xs-');
+  // @include HeadingMixin('xs-');
+  // @include GapMixin('xs-');
+  // @include UtilitiesMixin('xs-');
+  // @include BordersMixin('xs-');
 }
 @include sm {
   @for $i from 1 through $grid-columns {
@@ -201,10 +203,11 @@ $flex-directions: (
   @include FlexDirectionMixin('sm-');
   @include JustifyContentMixin('sm-');
   @include AlignItemsMixin('sm-');
-  @include HeadingMixin('sm-');
+  // @include HeadingMixin('sm-');
   @include GapMixin('sm-');
   @include UtilitiesMixin('sm-');
   @include BordersMixin('sm-');
+  @include Visibility('sm-');
 }
 @include md {
   @for $i from 1 through $grid-columns {
@@ -221,10 +224,11 @@ $flex-directions: (
   @include FlexDirectionMixin('md-');
   @include JustifyContentMixin('md-');
   @include AlignItemsMixin('md-');
-  @include HeadingMixin('md-');
+  // @include HeadingMixin('md-');
   @include GapMixin('md-');
   @include UtilitiesMixin('md-');
   @include BordersMixin('md-');
+  @include Visibility('md-');
 }
 @include lg {
   @for $i from 1 through $grid-columns {
@@ -241,10 +245,11 @@ $flex-directions: (
   @include FlexDirectionMixin('lg-');
   @include JustifyContentMixin('lg-');
   @include AlignItemsMixin('lg-');
-  @include HeadingMixin('lg-');
+  // @include HeadingMixin('lg-');
   @include GapMixin('lg-');
   @include UtilitiesMixin('lg-');
   @include BordersMixin('lg-');
+  @include Visibility('lg-');
 }
 
 @include xl {
@@ -262,8 +267,9 @@ $flex-directions: (
   @include FlexDirectionMixin('xl-');
   @include JustifyContentMixin('xl-');
   @include AlignItemsMixin('xl-');
-  @include HeadingMixin('xl-');
+  // @include HeadingMixin('xl-');
   @include GapMixin('xl-');
   @include UtilitiesMixin('xl-');
   @include BordersMixin('xl-');
+  @include Visibility('xl-');
 }

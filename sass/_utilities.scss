@@ -114,7 +114,7 @@ $utilities: (
     ),
   ),
   'opacity': (
-    'prefix': 'opacity',
+    'prefix': 'op',
     'values': (
       '0': 0,
       '10': 0.1,
@@ -155,7 +155,6 @@ $utilities: (
       'xs': $font-size-xs,
       'sm': $font-size-sm,
       'md': $font-size-md,
-      'base': $base-font-size,
       'lg': $font-size-lg,
       'xl': $font-size-xl,
       '2xl': $font-size-2xl,
@@ -167,23 +166,45 @@ $utilities: (
   'font-family': (
     'prefix': 'font',
     'values': (
-      'inherit': inherit,
       'mono': monospace,
       'serif': serif,
       'sans': sans-serif,
-      'inter': 'Inter',
-      'oswald': 'Oswald',
-      'roboto': 'Roboto Mono',
+      'inter': (
+        'Inter',
+        Helvetica,
+        Arial,
+        sans-serif,
+      ),
+      'oswald': (
+        'Oswald',
+        Helvetica,
+        Arial,
+        sans-serif,
+      ),
+      'roboto': (
+        'Roboto Mono',
+        Helvetica,
+        Arial,
+        sans-serif,
+      ),
     ),
   ),
   'font-weight': (
     'prefix': 'font',
     'values': (
       'light': 300,
-      'normal': 400,
+      'base': 400,
       'medium': 500,
       'bold': 700,
       'extrabold': 900,
+    ),
+  ),
+  'font-style': (
+    'prefix': 'font',
+    'values': (
+      'italic': italic,
+      'oblique': oblique,
+      'normal': normal,
     ),
   ),
   'text-align': (
@@ -193,8 +214,15 @@ $utilities: (
       'left': left,
       'right': right,
       'justify': justify,
-      'start': start,
-      'end': end,
+    ),
+  ),
+  'text-decoration': (
+    'prefix': 'text',
+    'values': (
+      'none': none,
+      'through': line-through,
+      'over': overline,
+      'under': underline,
     ),
   ),
   'text-transform': (
@@ -206,16 +234,106 @@ $utilities: (
       'lower': lowercase,
     ),
   ),
+  'position': (
+    'prefix': 'pos',
+    'values': (
+      'absolute': absolute,
+      'fixed': fixed,
+      'relative': relative,
+      'static': static,
+      'sticky': sticky,
+    ),
+  ),
+  'top': (
+    'prefix': 'top',
+    'values': (
+      '0': 0px,
+      '1': 4px,
+      '1-5': 8px,
+      '1r': 1rem,
+      '2': 20px,
+      '2-5': 28px,
+      '2r': 2rem,
+      '3': 36px,
+      '3-5': 40px,
+      '3r': 3rem,
+      '4': 52px,
+      '4-5': 60px,
+      '4r': 4rem,
+      '5': 70px,
+      '5-5': 76px,
+      '5r': 5rem,
+    ),
+  ),
+  'left': (
+    'prefix': 'left',
+    'values': (
+      '0': 0px,
+      '1': 4px,
+      '1-5': 8px,
+      '1r': 1rem,
+      '2': 20px,
+      '2-5': 28px,
+      '2r': 2rem,
+      '3': 36px,
+      '3-5': 40px,
+      '3r': 3rem,
+      '4': 52px,
+      '4-5': 60px,
+      '4r': 4rem,
+      '5': 70px,
+      '5-5': 76px,
+      '5r': 5rem,
+    ),
+  ),
+  'right': (
+    'prefix': 'right',
+    'values': (
+      '0': 0px,
+      '1': 4px,
+      '1-5': 8px,
+      '1r': 1rem,
+      '2': 20px,
+      '2-5': 28px,
+      '2r': 2rem,
+      '3': 36px,
+      '3-5': 40px,
+      '3r': 3rem,
+      '4': 52px,
+      '4-5': 60px,
+      '4r': 4rem,
+      '5': 70px,
+      '5-5': 76px,
+      '5r': 5rem,
+    ),
+  ),
+  'bottom': (
+    'prefix': 'bottom',
+    'values': (
+      '0': 0px,
+      '1': 4px,
+      '1-5': 8px,
+      '1r': 1rem,
+      '2': 20px,
+      '2-5': 28px,
+      '2r': 2rem,
+      '3': 36px,
+      '3-5': 40px,
+      '3r': 3rem,
+      '4': 52px,
+      '4-5': 60px,
+      '4r': 4rem,
+      '5': 70px,
+      '5-5': 76px,
+      '5r': 5rem,
+    ),
+  ),
   'width': (
     'prefix': 'w',
     'values': (
       '0': 0,
-      'px': 1px,
-      '0-5': math.div($base-font-size, 8),
       '1': math.div($base-font-size, 4),
-      '1-5': math.div($base-font-size, 2),
       '2': $base-font-size,
-      '2-5': $base-font-size * 1.25,
       '3': $base-font-size * 1.5,
       '4': $base-font-size * 2,
       '5': $base-font-size * 2.5,
@@ -260,8 +378,6 @@ $utilities: (
       '1--4': 25%,
       '2--4': 50%,
       '3--4': 75%,
-      '1--3': 33.333333%,
-      '2--3': 66.666667%,
       '1--5': 20%,
       '2--5': 40%,
       '3--5': 60%,
@@ -274,12 +390,8 @@ $utilities: (
     'prefix': 'h',
     'values': (
       '0': 0,
-      'px': 1px,
-      '0-5': math.div($base-font-size, 8),
       '1': math.div($base-font-size, 4),
-      '1-5': math.div($base-font-size, 2),
       '2': $base-font-size,
-      '2-5': $base-font-size * 1.25,
       '3': $base-font-size * 1.5,
       '4': $base-font-size * 2,
       '5': $base-font-size * 2.5,
@@ -324,8 +436,6 @@ $utilities: (
       '1--4': 25%,
       '2--4': 50%,
       '3--4': 75%,
-      '1--3': 33.333333%,
-      '2--3': 66.666667%,
       '1--5': 20%,
       '2--5': 40%,
       '3--5': 60%,
@@ -393,44 +503,55 @@ $utilities: (
   ),
 );
 
-.visible {
-  visibility: visible !important;
+@mixin Visibility($br: '') {
+  .#{$br}visible {
+    visibility: visible !important;
+  }
+  .#{$br}hidden {
+    visibility: hidden !important;
+  }
 }
-
-.hidden {
-  visibility: hidden !important;
-}
+@include Visibility;
 .main {
-  line-height: 2;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  padding: math.div($base-padding, 1.25) 0;
+}
+.sub {
+  line-height: 1.25;
   font-weight: 500;
+  font-size: 1.15rem;
   letter-spacing: 1px;
   padding: math.div($base-padding, 1.25) 0;
 }
 .image {
   object-fit: cover;
+  height: auto;
 }
 
-$headings: (
-  'h1': $font-size-2xl,
-  'h2': $font-size-xl,
-  'h3': $font-size-lg,
-  'h4': $font-size-md,
-  'h5': $font-size-sm,
-  'h6': $font-size-xs,
-);
+// $headings: (
+//   'h1': $font-size-2xl,
+//   'h2': $font-size-xl,
+//   'h3': $font-size-lg,
+//   'h4': $font-size-md,
+//   'h5': $font-size-sm,
+//   'h6': $font-size-xs,
+// );
 
-@each $key, $val in $headings {
-  .#{$key} {
-    font-size: $val;
-    line-height: 1;
-    padding: $base-padding 0;
-    letter-spacing: 3px;
-    span {
-      font-size: calc($val - 25%);
-      margin: 0 10px;
-    }
-  }
-}
+// @each $key, $val in $headings {
+//   .#{$key} {
+//     font-size: $val * 1.25;
+//     line-height: 1;
+//     padding: calc($base-padding - 1rem) 0;
+//     letter-spacing: 0px;
+//     span {
+//       font-size: calc($val - 25%);
+//       margin: 0 10px;
+//     }
+//   }
+// }
 
 // generate utility classes
 @each $property, $map in $utilities {
@@ -454,11 +575,6 @@ $headings: (
         }
       }
       @if $v == 'flex' {
-        @include xs {
-          .#{$prefix}-#{$k} {
-            #{$property}: $v;
-          }
-        }
         @include sm {
           .#{$prefix}-#{$k} {
             #{$property}: $v;
