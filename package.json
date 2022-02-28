@@ -1,6 +1,6 @@
 {
   "name": "tornadocss",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "TornadoCSS is a simple CSS Framework with Both Utilities and Pre-Styled Components",
   "main": "dist/js/tornado.min.js",
   "module": "dist/js/tornado.min.js",
