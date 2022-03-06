@@ -17,7 +17,7 @@ npm install tornadocss
 After installation, you can import the CSS file into your project using this snippet:
 
 ```sh
-@import 'tornadocss/dist/css/tornado.min.css'
+import 'tornadocss/dist/css/tornado.min.css'
 ```
 
 ### CDN
