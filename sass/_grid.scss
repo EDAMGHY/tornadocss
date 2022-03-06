@@ -3,8 +3,8 @@
 $grid-columns: 12;
 
 $align-values: (
-  'f-end': flex-end,
-  'f-start': flex-start,
+  'end': flex-end,
+  'start': flex-start,
   'center': center,
 );
 
@@ -17,8 +17,8 @@ $grid-gaps: (
   '5': 50px,
 );
 $justify-values: (
-  'f-end': flex-end,
-  'f-start': flex-start,
+  'end': flex-end,
+  'start': flex-start,
   'between': space-between,
   'around': space-around,
   'evenly': space-evenly,

@@ -119,9 +119,13 @@ $utilities: (
       '0': 0,
       '10': 0.1,
       '20': 0.2,
+      '30': 0.3,
       '40': 0.4,
+      '50': 0.5,
       '60': 0.6,
+      '70': 0.7,
       '80': 0.8,
+      '90': 0.9,
       '100': 1,
     ),
   ),
@@ -360,18 +364,13 @@ $utilities: (
       '32': $base-font-size * 18.75,
       '36': $base-font-size * 20,
       '40': $base-font-size * 22.5,
-      '44': $base-font-size * 24,
       '48': $base-font-size * 26,
-      '52': $base-font-size * 28,
       '56': $base-font-size * 30,
       '60': $base-font-size * 35,
-      '64': $base-font-size * 38,
       '68': $base-font-size * 42,
       '72': $base-font-size * 46,
-      '76': $base-font-size * 52,
       '80': $base-font-size * 54,
       '88': $base-font-size * 56,
-      '92': $base-font-size * 58,
       '96': $base-font-size * 60,
       '100': $base-font-size * 62.5,
       '1--2': 50%,
@@ -418,18 +417,13 @@ $utilities: (
       '32': $base-font-size * 18.75,
       '36': $base-font-size * 20,
       '40': $base-font-size * 22.5,
-      '44': $base-font-size * 24,
       '48': $base-font-size * 26,
-      '52': $base-font-size * 28,
       '56': $base-font-size * 30,
       '60': $base-font-size * 35,
-      '64': $base-font-size * 38,
       '68': $base-font-size * 42,
       '72': $base-font-size * 46,
-      '76': $base-font-size * 52,
       '80': $base-font-size * 54,
       '88': $base-font-size * 56,
-      '92': $base-font-size * 58,
       '96': $base-font-size * 60,
       '100': $base-font-size * 62.5,
       '1--2': 50%,
@@ -464,9 +458,6 @@ $utilities: (
       'solid': solid,
       'dashed': dashed,
       'dotted': dotted,
-      'double': double,
-      'groove': groove,
-      'ridge': ridge,
       'hidden': hidden,
     ),
   ),
@@ -572,6 +563,13 @@ $utilities: (
           .#{$prefix}y-#{$k} {
             #{$property}: $v 0;
           }
+        } @else {
+          .#{$prefix}x-#{$k} {
+            #{$property}: 0;
+          }
+          .#{$prefix}y-#{$k} {
+            #{$property}: 0;
+          }
         }
       }
       @if $v == 'flex' {
@@ -605,7 +603,7 @@ $utilities: (
 
 @each $key, $val in $colors {
   @if ($val != black and $val != white and $val != transparent) {
-    @for $i from 9 through 1 {
+    @for $i from 8 through 1 {
       .border-#{$key}-#{$i}0 {
         border-color: mixW($val, $i * 10);
         transition: border-color 0.5s ease;

@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@mixin btn($bg-color: #c3c3c3) {
+@mixin btn {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
@@ -9,7 +9,6 @@
   padding: math.div($base-padding, 1.25) $base-padding * 1.5;
   letter-spacing: 2px;
   box-sizing: border-box;
-  background-color: $bg-color;
   font-weight: 600;
   margin-top: $base-margin;
   margin-bottom: $base-margin;
@@ -17,11 +16,7 @@
   text-transform: capitalize;
   transition: border-color 0.5s ease, color 0.5s ease,
     background-color 0.5s ease;
-  color: #555;
-  &:hover {
-    color: $bg-color;
-    background: #555;
-  }
+
   &:active {
     transform: scale(0.95);
   }
@@ -34,10 +29,23 @@
 }
 .btn {
   @include btn;
+  color: #555;
+  background: #c3c3c3;
+  &:hover {
+    color: #c3c3c3;
+    background: #555;
+  }
 }
 .btn-outlined {
-  @include btn(#fff);
+  @include btn;
+  background: #fff;
   border: $base-border-thickness * 2 solid $gray;
+  color: #555;
+  background: #c3c3c3;
+  &:hover {
+    color: #c3c3c3;
+    background: #555;
+  }
 }
 @each $key, $val in $colors {
   @if (
@@ -45,7 +53,8 @@
   ) {
     @for $i from 1 through 6 {
       .btn-#{$key}-#{$i}0 {
-        @include btn(mixW($val, $i * 10));
+        // @include btn;
+        background: mixW($val, $i * 10);
         @if ($i <=3) {
           color: white;
         } @else {
@@ -61,7 +70,8 @@
         }
       }
       .btn-outlined-#{$key}-#{$i}0 {
-        @include btn(#fff);
+        // @include btn;
+        background: #fff;
         border: $base-border-thickness * 2 solid mixW($val, $i * 10);
         @if ($i <= 3) {
           color: mixW($val, $i * 10);
@@ -82,20 +92,23 @@
       }
     }
   } @else {
-    .btn-#{$key} {
-      @include btn($val);
-      @if ($val == black) {
-        color: white;
-      } @else {
-        color: black;
-      }
-      &:hover {
-        @if $val == white {
-          background: black;
+    @if $val != #808080 {
+      .btn-#{$key} {
+        @include btn;
+        background: $val;
+        @if ($val == black) {
           color: white;
         } @else {
           color: black;
-          background: white;
+        }
+        &:hover {
+          @if $val == white {
+            background: black;
+            color: white;
+          } @else {
+            color: black;
+            background: white;
+          }
         }
       }
     }

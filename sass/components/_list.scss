@@ -1,29 +1,15 @@
 @use 'sass:math';
 
-@mixin List($bg: #c3c3c3, $color: #444, $width: 100%, $content: flex-start) {
+@mixin List($width: 100%, $content: flex-start) {
   width: $width;
   margin: $base-margin * 1.5 0;
   box-shadow: $base-box-shadow;
   border: 0;
   border-radius: $base-radius;
-  @if $bg != #c3c3c3 {
-    @if ($bg == $red or $bg == $purple) {
-      background: lighten($bg, 30);
-    } @else if ($bg == $orange or $bg == $yellow) {
-      //   background: lighten($bg, 45);
-      background: $bg;
-    } @else if ($bg==$green) {
-      background: lighten($bg, 5);
-    } @else {
-      background: lighten($bg, 45);
-    }
-  } @else {
-    background: $bg;
-  }
-  color: $color;
-  & > * {
+  & .item {
     padding: $base-padding $base-padding * 2.5;
-    border-bottom: $base-border-thickness solid lighten($color, 35);
+    border-bottom-width: $base-border-thickness;
+    border-bottom-style: solid;
     letter-spacing: 2px;
     border-top: 0;
     border-left: 0;
@@ -35,28 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: $content;
-    &:hover {
-      @if $bg != #c3c3c3 {
-        @if ($bg == $red or $bg == $purple) {
-          color: lighten($bg, 30);
-        } @else if ($bg == $orange or $bg == $yellow) {
-          //   background: lighten($bg, 45);
-          color: $bg;
-        } @else if ($bg==$green) {
-          color: lighten($bg, 5);
-        } @else {
-          color: lighten($bg, 45);
-        }
-        @if ($bg == $yellow) {
-          background: $color;
-        } @else {
-          background: darken($color, 7);
-        }
-      } @else {
-        color: $bg;
-        background: $color;
-      }
-    }
+
     &:first-child {
       border-radius: $base-radius $base-radius 0 0;
     }
@@ -68,7 +33,7 @@
   @media (max-width: 768px) {
     width: 100%;
     margin: math.div($base-margin, 1.25) 0;
-    & > * {
+    & .item {
       padding: math.div($base-padding, 1.5) $base-padding;
       font-size: math.div($base-font-size, 1.5);
     }
@@ -77,10 +42,51 @@
 
 .items {
   @include List;
+  background: #c3c3c3;
+  color: #444;
+  & .item {
+    border-bottom-color: #444;
+    &:hover {
+      color: #c3c3c3;
+      background: #444;
+    }
+  }
+}
+
+.items-white {
+  background: #fff !important;
+  color: black !important;
+  & .item {
+    border-bottom-color: black !important;
+    &:hover {
+      color: #fff !important;
+      background: black !important;
+    }
+  }
+}
+.items-black {
+  background: black !important;
+  color: #fff !important;
+  & .item {
+    border-bottom-color: #fff !important;
+    &:hover {
+      color: black !important;
+      background: #fff !important;
+    }
+  }
 }
 
 .items-between {
   @include List($content: space-between);
+  background: #c3c3c3;
+  color: #444;
+  & .item {
+    border-bottom-color: #444;
+    &:hover {
+      color: #c3c3c3;
+      background: #444;
+    }
+  }
 }
 
 @each $key, $val in $colors {
@@ -88,22 +94,40 @@
     $val != black and $val != white and $val != #808080 and $val != transparent
   ) {
     .items-#{$key} {
-      @include List($val, #fff);
+      @if $val == #d70000 {
+        background: lighten($val, 35) !important;
+      } @else if $val == #ed7014 or $val ==#f6c31c {
+        background: lighten($val, 30) !important;
+      } @else {
+        background: lighten($val, 55) !important;
+      }
+      color: #444 !important;
+      & .item {
+        border-bottom-color: #444;
+        &:hover {
+          @if $val == #d70000 {
+            color: lighten($val, 35) !important;
+          } @else if $val == #ed7014 or $val ==#f6c31c {
+            color: lighten($val, 30) !important;
+          } @else {
+            color: lighten($val, 55) !important;
+          }
+          background: #444 !important;
+        }
+      }
     }
-    .items-#{$key}-sm {
-      @include List($val, #fff, 400px);
+    .items-sm {
+      @include List(400px);
     }
-    .items-#{$key}-lg {
-      @include List($val, #fff, 600px);
+    .items-lg {
+      @include List(600px);
     }
-    .items-between-#{$key} {
-      @include List($val, #fff, $content: space-between);
+
+    .items-between-sm {
+      @include List(400px, space-between);
     }
-    .items-between-#{$key}-sm {
-      @include List($val, #fff, 400px, $content: space-between);
-    }
-    .items-between-#{$key}-lg {
-      @include List($val, #fff, 600px, space-between);
+    .items-between-lg {
+      @include List(600px, space-between);
     }
   }
 }

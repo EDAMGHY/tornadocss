@@ -22,15 +22,19 @@
 }
 
 @each $key, $val in $colors {
-  @if ($val != black and $val != white and $val != transparent) {
+  @if (
+    $val != black and $val != white and $val != #808080 and $val != transparent
+  ) {
     @for $i from 5 through 5 {
       .badge-#{$key} {
         @include badge(mixW($val, $i * 10), $i);
       }
     }
   } @else {
-    .badge-#{$key} {
-      @include badge($val);
+    @if $val != #808080 and $val != transparent {
+      .badge-#{$key} {
+        @include badge($val);
+      }
     }
   }
 }

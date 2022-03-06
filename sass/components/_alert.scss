@@ -1,19 +1,22 @@
 @use 'sass:math';
-@mixin alert($alert-bg: #c3c3c3, $i: 50) {
+@mixin alert {
   padding: $base-padding * 1.5;
-  background: $alert-bg;
+  // background: $alert-bg;
   border-radius: $base-radius;
-  margin: $base-margin * 1.5 0;
-  @if ($alert-bg==white) {
-    border: 2px solid black;
-    color: black;
-  } @else if($alert-bg==black) {
-    border: 2px solid white;
-    color: white;
-  } @else {
-    color: darken($alert-bg, 45);
-    border: 2px solid darken($alert-bg, 35);
-  }
+  margin: 0.5rem 0;
+  border-width: 3px;
+  border-style: solid;
+  width: 100%;
+  // @if ($alert-bg==white) {
+  //   border-color: black;
+  //   color: black;
+  // } @else if($alert-bg==black) {
+  //   border-color: white;
+  //   color: white;
+  // } @else {
+  //   color: darken($alert-bg, 45);
+  //   border-color: darken($alert-bg, 35);
+  // }
   text-align: center;
   font-size: $base-font-size;
   letter-spacing: 1px;
@@ -31,6 +34,21 @@
 }
 .alert {
   @include alert;
+  background: #c3c3c3;
+  color: darken(#c3c3c3, 45);
+  border-color: darken(#c3c3c3, 35);
+}
+.alert-white {
+  @include alert;
+  background: white;
+  color: black;
+  border-color: black;
+}
+.alert-black {
+  @include alert;
+  background: black;
+  color: white;
+  border-color: white;
 }
 
 @each $key, $val in $colors {
@@ -46,13 +64,11 @@
           $type: 'dark';
         }
         .alert-#{$key}-#{$type} {
-          @include alert(mixW($val, $i * 10), $i);
+          background: mixW($val, $i * 10);
+          color: darken(mixW($val, $i * 10), 45);
+          border-color: darken(mixW($val, $i * 10), 35);
         }
       }
-    }
-  } @else {
-    .alert-#{$key} {
-      @include alert($val);
     }
   }
 }
